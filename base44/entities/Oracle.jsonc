@@ -1,0 +1,47 @@
+{
+  "name": "Oracle",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre del or\u00e1culo verificador"
+    },
+    "oracle_type": {
+      "type": "string",
+      "enum": [
+        "death_registry",
+        "notary",
+        "hospital",
+        "legal",
+        "blockchain"
+      ],
+      "default": "death_registry"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "pending",
+        "verified",
+        "rejected"
+      ],
+      "default": "active"
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reference_id": {
+      "type": "string",
+      "description": "ID de referencia del certificado o verificaci\u00f3n"
+    },
+    "endpoint": {
+      "type": "string",
+      "description": "Endpoint o canal de verificaci\u00f3n"
+    }
+  },
+  "required": [
+    "name",
+    "oracle_type"
+  ]
+}

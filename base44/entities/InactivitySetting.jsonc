@@ -1,0 +1,42 @@
+{
+  "name": "InactivitySetting",
+  "type": "object",
+  "properties": {
+    "inactivity_days": {
+      "type": "number",
+      "default": 90,
+      "description": "D\u00edas de inactividad antes de liberar claves"
+    },
+    "last_check_in": {
+      "type": "string",
+      "format": "date-time",
+      "description": "\u00daltima confirmaci\u00f3n de actividad del usuario"
+    },
+    "alert_email": {
+      "type": "boolean",
+      "default": true
+    },
+    "alert_sms": {
+      "type": "boolean",
+      "default": false
+    },
+    "alert_telegram": {
+      "type": "boolean",
+      "default": false
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "telegram_handle": {
+      "type": "string"
+    },
+    "check_in_frequency_days": {
+      "type": "number",
+      "default": 30,
+      "description": "Cada cu\u00e1ntos d\u00edas se env\u00eda recordatorio de check-in"
+    }
+  },
+  "required": [
+    "inactivity_days"
+  ]
+}

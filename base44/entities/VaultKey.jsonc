@@ -1,0 +1,64 @@
+{
+  "name": "VaultKey",
+  "type": "object",
+  "properties": {
+    "key_type": {
+      "type": "string",
+      "enum": [
+        "web3",
+        "web2"
+      ],
+      "default": "web3",
+      "description": "Tipo de clave: web3 (wallet) o web2 (tradicional)"
+    },
+    "label": {
+      "type": "string",
+      "description": "Nombre identificador"
+    },
+    "wallet_address": {
+      "type": "string",
+      "description": "Direcci\u00f3n p\u00fablica de la wallet (web3)"
+    },
+    "private_key_encrypted": {
+      "type": "string",
+      "description": "Clave privada o seed phrase cifrada (web3)"
+    },
+    "chain": {
+      "type": "string",
+      "enum": [
+        "ethereum",
+        "bitcoin",
+        "solana",
+        "polygon",
+        "bsc",
+        "other"
+      ],
+      "default": "ethereum"
+    },
+    "service_name": {
+      "type": "string",
+      "description": "Servicio o plataforma (web2: banco, email, Exchange...)"
+    },
+    "username": {
+      "type": "string",
+      "description": "Usuario o email de acceso (web2)"
+    },
+    "secret_encrypted": {
+      "type": "string",
+      "description": "Contrase\u00f1a o credencial cifrada (web2)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas o instrucciones para el heredero"
+    },
+    "allocation_percentage": {
+      "type": "number",
+      "default": 0,
+      "description": "Porcentaje asignado a herederos"
+    }
+  },
+  "required": [
+    "label",
+    "key_type"
+  ]
+}

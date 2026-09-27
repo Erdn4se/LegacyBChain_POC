@@ -1,0 +1,30 @@
+{
+  "name": "Notary",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre del notario o notar\u00eda"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email de contacto"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Tel\u00e9fono de contacto"
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Jurisdicci\u00f3n o pa\u00eds donde opera"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Alcance del patrimonio del mundo real a tramitar (inmuebles, cuentas, veh\u00edculos...)"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
